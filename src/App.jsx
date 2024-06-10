@@ -7,7 +7,7 @@ import { add, subtract } from "./redux/slices/calculatorSlice";
 function App() {
   const [inputValue, setInputValue] = useState("");
   const result = useSelector((state) => state.calculator.result);
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
 
   const handleAdd = () => {
     dispatch(add(Number(inputValue)));
